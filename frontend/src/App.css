@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Layout */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #dcd9df;
+  overflow: hidden; /* Desktop pe scroll band */
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Page Content */
+.page-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  height: 80px;
+  background-color: #1f2d3d;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: white;
+}
+
+/* Footer */
+.footer {
+  height: 70px;
+  background-color: #1f2d3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+}
+
+/* 📱 Mobile Only → Scroll Allow */
+@media (max-width: 768px) {
+
+  body {
+    overflow-y: auto; /* Mobile pe scroll allow */
+  }
+
+  .app-container {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .page-content {
+    padding: 30px 20px 100px 20px; /* Footer overlap fix */
+  }
+
+}
