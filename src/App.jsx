@@ -1,0 +1,62 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import Overview from "./pages/Overview";
+import SpeakingTips from "./pages/SpeakingTips";
+import SampleSpeechTest from "./pages/SampleSpeechTest";
+import PartAExample from "./pages/PartAExample";
+import PartA from "./pages/PartA";
+import PartBExample from "./pages/PartBExample";
+import PartB from "./pages/PartB";
+import PartCExample from "./pages/PartCExample";
+import PartC from "./pages/PartC";
+import PartD from "./pages/PartD";
+import PartE from "./pages/PartE";
+import PartF from "./pages/PartF";
+import Completion from "./pages/Completion";
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        
+        {/* Static Navbar */}
+        <Navbar />
+
+        {/* Page Content */}
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/overview" element={<Overview />} />
+          <Route path="/speaking-tips" element={<SpeakingTips />} />
+          <Route path="/sample-speech-test" element={<SampleSpeechTest />} />
+
+          <Route path="/part-a-example" element={<PartAExample />} />
+          <Route path="/part-a" element={<PartA />} />
+
+          <Route path="/part-b-example" element={<PartBExample />} />
+          <Route path="/part-b" element={<PartB />} />
+
+          <Route path="/part-c-example" element={<PartCExample />} />
+          <Route path="/part-c" element={<PartC />} />
+
+          <Route path="/part-d" element={<PartD />} />
+          <Route path="/part-e" element={<PartE />} />
+          <Route path="/part-f" element={<PartF />} />
+
+          <Route path="/completion" element={<Completion />} />
+        </Routes>
+
+        {/* Static Footer */}
+        <Footer />
+
+      </div>
+    </Router>
+  );
+}
+
+export default App;
